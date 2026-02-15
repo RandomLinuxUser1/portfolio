@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-pIVmH6Sceq6IwQdxo2d93Vp6Xbtq1g1TqAulH4aTQYv6u6gkY8RfXxXk7E3iB6CDeGrdL7L+6lX0C7Y0t+cv0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <title>b61u</title>
+
 </head>
 <body>
 <div class="container">
@@ -25,6 +26,7 @@
             <span class="maximize"></span>
         </div>
     </div>
+
     <div class="content">
         <div class="seconds">
             <div class="starter">
@@ -38,10 +40,15 @@
                 <p>What I am currently learning is AI learning/machine learning! I've been tinkering with making my own AIs/modifying other AIs. Currently the one I've been working on for almost 4 months now is zira. Zira has a total of 7.1M tokens!!! It is considered a SLM. I will get LLM soon though.</p>
             </div>
             <div class="donate">
-                <p>           If you think my work is worth supporting please consider donating to my links.</p>
+                <p>If you think my work is worth supporting please consider donating to my links.</p>
             </div>
         </div>
     </div>
+
+    <div class="side">
+        <p><i class="fas fa-info-circle"></i> Side Note (click me)</p>
+    </div>
+
     <div class="donos">
         <div class="github">
             <a href="https://github.com/RandomLinuxUser1"><i class="fab fa-github"></i> GitHub</a>
@@ -57,5 +64,36 @@
        </div>
     </div>
 </div>
+
+<div class="side-overlay" id="sideOverlay">
+    <div class="side-popup">
+        <span class="close-btn" id="closeSide">&times;</span>
+        <h2>Important Side Note</h2>
+        <p>Hey everyone, I want to clarify a situation regarding @voltz. He acted in a way he shouldn’t have, despite being my friend, and shared screenshots of me in the Freedom GC, flaming me and making it seem like my work was fake.</p>
+        <p>Yes, I was using AI at the time, but the screenshots showed chats that were dated months earlier and taken out of context. These chats were also the last ever chats on said AI platform used. My work is legitimate, and this situation was blown up unnecessarily.</p>
+        <p>@voltz’s posts caused confusion and misrepresented the facts, spreading false impressions about me. I want to make it clear that my work is mine and fully legit. Those screenshots don’t change that at all.</p>
+        <p>Bottom line: I did the work, the screenshoted chats are old, and this drama was unfair. Thanks for understanding and keeping the context in mind. - b61u</p>
+    </div>
+</div>
+
+<script>
+const side = document.querySelector('.side');
+const overlay = document.getElementById('sideOverlay');
+const closeBtn = document.getElementById('closeSide');
+
+side.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+});
+
+closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+});
+
+overlay.addEventListener('click', (e) => {
+    if(e.target === overlay){
+        overlay.style.display = 'none';
+    }
+});
+</script>
 </body>
 </html>
