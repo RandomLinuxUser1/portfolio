@@ -224,3 +224,63 @@ a:hover{color:var(--muted);transform:translateY(-1px)}
     color: var(--muted);
     transform: scale(1.1);
 }
+
+.side {
+    cursor: pointer;
+    margin: 12px auto;
+    text-align: center;
+    font-weight: 500;
+    color: var(--muted);
+    transition: color 120ms ease;
+}
+.side:hover { color: var(--title); }
+
+.side-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(19,19,19,0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.side-popup {
+    background: var(--window-bg);
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    color: var(--title);
+    font-family: "DM Mono", monospace;
+}
+
+.side-popup h2 {
+    margin-top: 0;
+    font-family: "Syne", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.side-popup p {
+    line-height: 1.6;
+    font-size: 13px;
+    margin-bottom: 12px;
+    color: #cfcfcf;
+}
+
+.side-popup .close-btn {
+    display: block;
+    text-align: right;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: var(--muted);
+    font-weight: 600;
+}
+.side-popup .close-btn:hover {
+    color: var(--title);
+}
